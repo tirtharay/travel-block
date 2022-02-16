@@ -1,0 +1,101 @@
+.travel-itinerary-block-container{
+    background-color: white;
+    padding: 20px 30px 20px 50px;
+    max-width: 1024px!important;
+    margin: 30px auto;
+    gap: 1em;
+}
+
+.travel-itinerary-block-row{
+    width: 100%;
+    border: solid 1px #eaeaea;
+    border-radius: 12px;
+}
+
+.travel-itinerary-block{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 20px 200px 1fr auto;
+    transition: 0.2s border-color;
+    color: #3a3a3a;
+    font-weight: 300;
+    font-size: 17px;
+    padding: 20px 30px;
+    padding-left: 0;
+}
+
+.travel-itinerary-block-daytime{
+    border-radius: 100%;
+    text-align: center;
+    padding: 12px;
+    background: green;
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-top: 40px;
+    margin-left: -30px;
+    font-size: 14px;
+    align-items: center;
+    display: inline-grid;
+}
+
+.heading-of-the-day{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.desc-title{
+    display: inline;
+}
+
+.travel-itinerary-block .img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.travel-itinerary-block .img img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.travel-itinerary-block-services-info{
+    border-left: solid 1px #eaeaea;
+    padding-left: 30px;
+}
+
+.travel-itinerary-block-services-info p{
+    display:grid;
+    grid-template-columns: 1fr auto;
+}
+
+.travel-itinerary-block-services-info > p > span{
+    display: flex;
+    align-self: center;
+    width:8px;
+    height:8px;
+    background: lightgray;
+    border-radius: 100%;
+    margin-left: 20px;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.travel-itinerary-block-services-info > p > span::after{
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    content: ' ';
+    border: 1px solid green;
+    border-radius: 100%;
+}
+
+.travel-itinerary-block-services-info > p > span.available{
+    background: green;
+}
