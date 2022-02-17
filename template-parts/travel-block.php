@@ -64,15 +64,31 @@ $overnight          = get_field('overnight');
 
         <div class="travel-itinerary-block-services-info">
 
-        <?php if ('breakfast' == get_field('services')) || ('breakfast' == get_field('services')) {   
-            $classavailable = 'available';
-        } ?>
-            <p>Breakfast<span class="$classavailable"></span></p>
-            <p>Lunch<span class="$classavailable"></span></p>
-            <p>Dinner<span class="$classavailable"></span>
-        </p>
-            <?php //print_r( $services); ?>
+        <?php
+            if( $services['breakfast'] == 1 ){
+                $brkfst_class = 'available';
+            } else{
+                $brkfst_class = 'unavailable';
+            }
+            if( $services['lunch'] == 1 ){
+                $lunch_class = 'available';
+            } else{
+                $lunch_class = 'unavailable';
+            }
+            if( $services['dinner'] == 1 ){
+                $dnr_class = 'available';
+            } else{
+                $dnr_class = 'unavailable';
+            }
+        ?>
+
+        <p>Breakfast<span class="<?php echo $brkfst_class; ?>"></span></p>
+        <p>Lunch<span class="<?php echo $lunch_class; ?>"></span></p>
+        <p>Dinner<span class="<?php echo $dnr_class; ?>"></span></p>
+        
         </div>
 
     </div>
 </div>
+
+
